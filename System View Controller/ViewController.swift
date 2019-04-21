@@ -151,8 +151,10 @@ extension ViewController {
     func activitiIndicator(run: Bool) {
         activityIndicator.isHidden = !run
         if run {
+            view.alpha = 0.5
             activityIndicator.startAnimating()
         } else {
+            view.alpha = 1
             activityIndicator.stopAnimating()
         }
     }
