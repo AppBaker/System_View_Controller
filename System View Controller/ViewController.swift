@@ -13,23 +13,32 @@ import SafariServices
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.isHidden = true
+        activityIndicator.style = .whiteLarge
         // Do any additional setup after loading the view.
     }
     //MARK:- IB Actions
     @IBAction func shareButtonPressed(_ sender: Any) {
+        activitiIndicator(run: true)
         guard let image = imageView.image else { return }
         let activityController = UIActivityViewController(
             activityItems: [image],
             applicationActivities: nil)
-        present(activityController, animated: true)
+        present(activityController, animated: true) {
+            self.activitiIndicator(run: false)
+        }
     }
     @IBAction func safariButtonPressed(_ sender: Any) {
+        activitiIndicator(run: true)
         let url = URL(string: "http://starrywings.ru")!
         let safariViewController = SFSafariViewController(url: url)
-        present(safariViewController, animated: true)
+        present(safariViewController, animated: true) {
+            self.activitiIndicator(run: false)
+        }
     }
     @IBAction func cameraButtonPressed(_ sender: Any) {
         let imagePicker = UIImagePickerController()
@@ -40,15 +49,21 @@ class ViewController: UIViewController {
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraAction = UIAlertAction(title: "Camera", style: .default) { action in
+                self.activitiIndicator(run: true)
                 imagePicker.sourceType = .camera
-                self.present(imagePicker, animated: true)
+                self.present(imagePicker, animated: true) {
+                    self.activitiIndicator(run: false)
+                }
             }
             alertController.addAction(cameraAction)
         }
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             let photoLibraryAction = UIAlertAction(title: "Photo Libraty", style: .default) { action in
+                self.activitiIndicator(run: true)
                 imagePicker.sourceType = .photoLibrary
-                self.present(imagePicker, animated: true)
+                self.present(imagePicker, animated: true) {
+                    self.activitiIndicator(run: false)
+                }
             }
             alertController.addAction(photoLibraryAction)
         }
@@ -57,11 +72,13 @@ class ViewController: UIViewController {
         present(alertController, animated: true)
     }
     @IBAction func emailButtonPressed(_ sender: Any) {
+        activitiIndicator(run: true)
         guard MFMailComposeViewController.canSendMail() else {
             let alert = UIAlertController(title: "Can't send e-mail", message: nil, preferredStyle: .alert)
             let okllAction = UIAlertAction(title: "Ok", style: .cancel)
             alert.addAction(okllAction)
             present(alert, animated: true)
+            activitiIndicator(run: false)
             return
         }
         
@@ -73,15 +90,20 @@ class ViewController: UIViewController {
         if let image = imageView.image?.pngData() {
             mailComposer.addAttachmentData(image, mimeType: "image/jpeg", fileName: "Photo")
         }
-        present(mailComposer, animated: true)
+
+        present(mailComposer, animated: true) {
+            self.activitiIndicator(run: false)
+        }
         
     }
     @IBAction func messageButtonPressed(_ sender: Any) {
+        activitiIndicator(run: true)
         guard MFMessageComposeViewController.canSendText() else {
             let alert = UIAlertController(title: "Can't send message", message: nil, preferredStyle: .alert)
             let okllAction = UIAlertAction(title: "Ok", style: .cancel)
             alert.addAction(okllAction)
             present(alert, animated: true)
+            activitiIndicator(run: false)
             return
         }
         let messageComposer = MFMessageComposeViewController()
@@ -91,7 +113,9 @@ class ViewController: UIViewController {
             messageComposer.addAttachmentData(image, typeIdentifier: "public.png", filename: "Photo.png")
         }
         
-        present(messageComposer, animated: true)
+        present(messageComposer, animated: true) {
+            self.activitiIndicator(run: false)
+        }
     }
     
 }
@@ -122,5 +146,14 @@ extension ViewController: MFMessageComposeViewControllerDelegate {
     
 }
 
-//UIApplication.shared.open(<#T##url: URL##URL#>, options: <#T##[UIApplication.OpenExternalURLOptionsKey : Any]#>, completionHandler: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
-
+// MARK: - Custom Methods
+extension ViewController {
+    func activitiIndicator(run: Bool) {
+        activityIndicator.isHidden = !run
+        if run {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
+}

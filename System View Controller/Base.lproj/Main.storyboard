@@ -21,58 +21,58 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moto" translatesAutoresizingMaskIntoConstraints="NO" id="hj8-fE-FSw">
                                 <rect key="frame" x="8" y="64" width="398" height="448"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-Qf-YxH">
-                                <rect key="frame" x="8" y="532" width="398" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-Qf-YxH">
+                                <rect key="frame" x="8" y="532" width="398" height="22"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uay-J4-NjI">
-                                        <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
-                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Share"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uay-J4-NjI">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="22"/>
+                                        <state key="normal" image="share"/>
                                         <connections>
                                             <action selector="shareButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6Y-TZ-s7V"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tci-rf-j6C">
-                                        <rect key="frame" x="81" y="0.0" width="73.5" height="30"/>
-                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Safari"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tci-rf-j6C">
+                                        <rect key="frame" x="83" y="0.0" width="66.5" height="22"/>
+                                        <state key="normal" image="safari"/>
                                         <connections>
                                             <action selector="safariButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdz-mB-O77"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyP-Ww-jjy">
-                                        <rect key="frame" x="162.5" y="0.0" width="73" height="30"/>
-                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Camera"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyP-Ww-jjy">
+                                        <rect key="frame" x="165.5" y="0.0" width="67" height="22"/>
+                                        <state key="normal" image="camera"/>
                                         <connections>
                                             <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8I-TV-LnC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Naf-KE-A0M">
-                                        <rect key="frame" x="243.5" y="0.0" width="73.5" height="30"/>
-                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Email"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Naf-KE-A0M">
+                                        <rect key="frame" x="248.5" y="0.0" width="66.5" height="22"/>
+                                        <state key="normal" image="email"/>
                                         <connections>
                                             <action selector="emailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1C-M4-GPC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Al3-HU-qoQ">
-                                        <rect key="frame" x="325" y="0.0" width="73" height="30"/>
-                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Message"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Al3-HU-qoQ">
+                                        <rect key="frame" x="331" y="0.0" width="67" height="22"/>
+                                        <state key="normal" image="message"/>
                                         <connections>
                                             <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIC-Dp-0Fq"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NgT-79-qop">
+                                <rect key="frame" x="197" y="278" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hj8-fE-FSw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2fz-eX-s6e"/>
+                            <constraint firstItem="NgT-79-qop" firstAttribute="centerY" secondItem="hj8-fE-FSw" secondAttribute="centerY" id="3wM-E5-Ac5"/>
                             <constraint firstItem="hj8-fE-FSw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="CLU-cB-cjv"/>
                             <constraint firstItem="pm6-Qf-YxH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="DCX-YP-Or2"/>
                             <constraint firstItem="hj8-fE-FSw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="HVu-l7-YQv"/>
+                            <constraint firstItem="NgT-79-qop" firstAttribute="centerX" secondItem="hj8-fE-FSw" secondAttribute="centerX" id="MUi-SF-HXv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pm6-Qf-YxH" secondAttribute="trailing" constant="8" id="gEt-7i-0XQ"/>
                             <constraint firstItem="pm6-Qf-YxH" firstAttribute="top" secondItem="hj8-fE-FSw" secondAttribute="bottom" constant="20" id="ovt-Co-ftY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hj8-fE-FSw" secondAttribute="trailing" constant="8" id="yK9-D1-GNc"/>
@@ -80,6 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="NgT-79-qop" id="19E-f5-DeU"/>
                         <outlet property="imageView" destination="hj8-fE-FSw" id="ZpT-EO-w2N"/>
                     </connections>
                 </viewController>
@@ -88,6 +89,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="moto" width="4096" height="2731"/>
+        <image name="camera" width="25" height="25"/>
+        <image name="email" width="25" height="25"/>
+        <image name="message" width="25" height="25"/>
+        <image name="moto" width="2048" height="1365.5"/>
+        <image name="safari" width="25" height="25"/>
+        <image name="share" width="25" height="25"/>
     </resources>
 </document>
